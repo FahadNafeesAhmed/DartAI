@@ -1,3 +1,8 @@
-import { nextJsConfig } from "eslint-config-next/flat";
+/** @type {import('eslint').Linter.Config[]} */
+const eslintConfig = [
+  {
+    ignores: [".next/**", "node_modules/**"],
+  },
+];
 
-export default nextJsConfig;
+export default eslintConfig;
