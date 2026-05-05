@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 import { mockStats, recentPRs, pendingRequests } from "@/lib/mock-data"
 import { AreaChart, Badge } from "@tremor/react"
 import { GitBranch, Plus, ExternalLink } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 const chartData = [
   { date: "Apr 28", Releases: 4 },
