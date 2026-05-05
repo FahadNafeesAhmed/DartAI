@@ -18,6 +18,8 @@ import {
 } from "lucide-react"
 import * as React from "react"
 import { cn } from "@/lib/utils"
+import { StatusBadge } from "@/components/ui/status-badge"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 
 const cliActivity = [
   { id: "1", command: "review .", user: "Sienna", duration: "1.2s", exitCode: 0, time: "2m ago" },
