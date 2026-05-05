@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup | DartCodeAI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #FAFAFA;
+        }
+
+        .glow {
+            box-shadow: 0 0 80px 20px rgba(99, 102, 241, 0.15);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col lg:flex-row">
+    <!-- Left: Form -->
+    <div class="w-full lg:w-1/2 flex flex-col p-8 lg:p-16">
+        <div class="flex items-center gap-3 mb-24">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#6366F1] to-[#818CF8] flex items-center justify-center text-white font-bold text-xs cursor-pointer"
+                onclick="window.location.href='../DartCodeAI.html'">DC</div>
+            <span class="font-semibold tracking-tight text-white">DartCodeAI</span>
+        </div>
+
+        <div class="max-w-[400px] w-full mx-auto space-y-8">
+            <div class="space-y-2">
+                <h1 class="text-3xl font-bold tracking-tight">Create an account</h1>
+                <p class="text-[#A1A1AA]">Join 400+ Flutter teams shipping faster with AI.</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label class="text-[11px] font-bold text-[#71717A] uppercase tracking-widest">First name</label>
+                        <input type="text" placeholder="Jane"
+                            class="w-full h-11 bg-[#0A0A0A] border border-[#1A1A1A] rounded-md px-4 text-sm focus:outline-none focus:ring-1 focus:ring-[#6366F1]">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[11px] font-bold text-[#71717A] uppercase tracking-widest">Last name</label>
+                        <input type="text" placeholder="Doe"
+                            class="w-full h-11 bg-[#0A0A0A] border border-[#1A1A1A] rounded-md px-4 text-sm focus:outline-none focus:ring-1 focus:ring-[#6366F1]">
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[11px] font-bold text-[#71717A] uppercase tracking-widest">Email</label>
+                    <input type="email" placeholder="name@company.com"
+                        class="w-full h-11 bg-[#0A0A0A] border border-[#1A1A1A] rounded-md px-4 text-sm focus:outline-none focus:ring-1 focus:ring-[#6366F1]">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[11px] font-bold text-[#71717A] uppercase tracking-widest">Password</label>
+                    <input type="password" placeholder="••••••••"
+                        class="w-full h-11 bg-[#0A0A0A] border border-[#1A1A1A] rounded-md px-4 text-sm focus:outline-none focus:ring-1 focus:ring-[#6366F1]">
+                </div>
+
+                <button onclick="window.location.href='preview.html'"
+                    class="w-full h-11 bg-[#6366F1] hover:bg-[#6366F1]/90 text-white font-semibold rounded-md transition-all mt-4">
+                    Create Account
+                </button>
+
+                <div class="relative py-4">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-[#1A1A1A]"></div>
+                    </div>
+                    <div class="relative flex justify-center text-[10px] uppercase tracking-widest text-[#71717A]"><span
+                            class="bg-black px-2">Or join with</span></div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <button
+                        class="h-11 border border-[#1A1A1A] rounded-md flex items-center justify-center gap-2 text-sm hover:bg-[#0A0A0A] transition-colors"><i
+                            data-lucide="github" class="w-4 h-4"></i> GitHub</button>
+                    <button
+                        class="h-11 border border-[#1A1A1A] rounded-md flex items-center justify-center gap-2 text-sm hover:bg-[#0A0A0A] transition-colors"><i
+                            data-lucide="mail" class="w-4 h-4"></i> Google</button>
+                </div>
+            </div>
+
+            <p class="text-sm text-center text-[#71717A]">
+                Already have an account? <a href="login_preview.html"
+                    class="text-[#6366F1] font-medium hover:underline">Log in</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Right: Visual -->
+    <div
+        class="hidden lg:flex w-1/2 bg-[#0A0A0A] border-l border-[#1A1A1A] items-center justify-center p-16 relative overflow-hidden">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#6366F1]/10 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div class="relative z-10 space-y-12 max-w-[480px]">
+            <div class="space-y-4">
+                <h2 class="text-4xl font-bold tracking-tight">Scale your Flutter development with AI guardrails.</h2>
+                <p class="text-[#A1A1AA] text-lg">DartCodeAI automates the boring parts of Flutter development so your
+                    team can focus on building features.</p>
+            </div>
+            <div class="space-y-6">
+                <div class="flex gap-4 p-4 rounded-xl border border-white/5 bg-white/5 backdrop-blur-sm">
+                    <div class="w-10 h-10 rounded-lg bg-[#6366F1]/20 flex items-center justify-center shrink-0"><i
+                            data-lucide="zap" class="w-5 h-5 text-[#6366F1]"></i></div>
+                    <div>
+                        <h3 class="font-semibold text-white">Automated Release Pipelines</h3>
+                        <p class="text-sm text-[#71717A]">AI generates changelogs and verifies builds instantly.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-4 rounded-xl border border-white/5 bg-white/5 backdrop-blur-sm">
+                    <div class="w-10 h-10 rounded-lg bg-[#6366F1]/20 flex items-center justify-center shrink-0"><i
+                            data-lucide="shield-check" class="w-5 h-5 text-[#6366F1]"></i></div>
+                    <div>
+                        <h3 class="font-semibold text-white">Intelligent QA Testing</h3>
+                        <p class="text-sm text-[#71717A]">Automatically detect and resolve flaky tests in your suite.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

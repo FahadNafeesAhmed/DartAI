@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | DartCodeAI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #FAFAFA;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col lg:flex-row">
+    <!-- Left: Form -->
+    <div class="w-full lg:w-1/2 flex flex-col p-8 lg:p-16">
+        <div class="flex items-center gap-3 mb-24">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#6366F1] to-[#818CF8] flex items-center justify-center text-white font-bold text-xs cursor-pointer"
+                onclick="window.location.href='../DartCodeAI.html'">DC</div>
+            <span class="font-semibold tracking-tight text-white">DartCodeAI</span>
+        </div>
+
+        <div class="max-w-[400px] w-full mx-auto space-y-8">
+            <div class="space-y-2">
+                <h1 class="text-3xl font-bold tracking-tight">Welcome back</h1>
+                <p class="text-[#A1A1AA]">Sign in to your DartCodeAI account</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="space-y-2">
+                    <label class="text-[11px] font-bold text-[#71717A] uppercase tracking-widest">Email</label>
+                    <input type="email" placeholder="name@company.com"
+                        class="w-full h-11 bg-[#0A0A0A] border border-[#1A1A1A] rounded-md px-4 text-sm focus:outline-none focus:ring-1 focus:ring-[#6366F1]">
+                </div>
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between">
+                        <label class="text-[11px] font-bold text-[#71717A] uppercase tracking-widest">Password</label>
+                        <a href="#"
+                            class="text-[11px] text-[#6366F1] font-bold hover:underline uppercase tracking-wider">Forgot?</a>
+                    </div>
+                    <input type="password" placeholder="••••••••"
+                        class="w-full h-11 bg-[#0A0A0A] border border-[#1A1A1A] rounded-md px-4 text-sm focus:outline-none focus:ring-1 focus:ring-[#6366F1]">
+                </div>
+
+                <button onclick="window.location.href='preview.html'"
+                    class="w-full h-11 bg-[#6366F1] hover:bg-[#6366F1]/90 text-white font-semibold rounded-md transition-all mt-4">
+                    Continue
+                </button>
+
+                <div class="relative py-4">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-[#1A1A1A]"></div>
+                    </div>
+                    <div class="relative flex justify-center text-[10px] uppercase tracking-widest text-[#71717A]"><span
+                            class="bg-black px-2">Or continue with</span></div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <button
+                        class="h-11 border border-[#1A1A1A] rounded-md flex items-center justify-center gap-2 text-sm hover:bg-[#0A0A0A] transition-colors"><i
+                            data-lucide="github" class="w-4 h-4"></i> GitHub</button>
+                    <button
+                        class="h-11 border border-[#1A1A1A] rounded-md flex items-center justify-center gap-2 text-sm hover:bg-[#0A0A0A] transition-colors"><i
+                            data-lucide="mail" class="w-4 h-4"></i> Google</button>
+                </div>
+            </div>
+
+            <p class="text-sm text-center text-[#71717A]">
+                New to DartCodeAI? <a href="signup_preview.html"
+                    class="text-[#6366F1] font-medium hover:underline">Create an account</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Right: Visual -->
+    <div
+        class="hidden lg:flex w-1/2 bg-[#0A0A0A] border-l border-[#1A1A1A] items-center justify-center p-16 relative overflow-hidden">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#6366F1]/10 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div class="w-full max-w-[560px] relative z-10 space-y-12">
+            <!-- Faux Dashboard Preview -->
+            <div class="bg-black rounded-xl border border-[#262626] shadow-2xl overflow-hidden scale-110 origin-center">
+                <div class="h-8 border-b border-[#1A1A1A] bg-[#0A0A0A] px-4 flex items-center gap-1.5">
+                    <div class="w-2.5 h-2.5 rounded-full bg-[#262626]"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-[#262626]"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-[#262626]"></div>
+                </div>
+                <div class="p-6 space-y-6">
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="p-3 border border-[#1A1A1A] rounded-lg space-y-1">
+                            <span class="text-[9px] uppercase tracking-wider text-[#71717A] font-bold">Releases</span>
+                            <div class="text-xl font-semibold">128</div>
+                        </div>
+                        <div class="p-3 border border-[#1A1A1A] rounded-lg space-y-1">
+                            <span class="text-[9px] uppercase tracking-wider text-[#71717A] font-bold">Tests</span>
+                            <div class="text-xl font-semibold text-emerald-500">99%</div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full h-32 bg-[#0A0A0A] rounded-lg border border-[#1A1A1A] flex items-center justify-center">
+                        <i data-lucide="activity" class="w-8 h-8 text-[#6366F1] opacity-20"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+/* ---------- Design tokens ---------- */
+:root{
+  --primary: #4F46E5;            /* Indigo 600 */
+  --accent:  #818CF8;            /* Indigo 400 */
+  --ink:     #0A0A0A;
+  --ink-2:   #1F2937;
+  --muted:   #6B7280;
+  --bg:      #FFFFFF;
+  --subtle:  #F9FAFB;
+  --subtle-2:#F3F4F6;
+  --border:  #E5E7EB;
+  --border-2:#D1D5DB;
+  --warn:    #B45309;
+  --warn-bg: #FEF3C7;
+  --green:   #047857;
+
+  --shadow-sm: 0 1px 2px rgba(10,10,10,.04);
+  --shadow:    0 1px 2px rgba(10,10,10,.04), 0 8px 24px -8px rgba(10,10,10,.08);
+  --shadow-lg: 0 1px 2px rgba(10,10,10,.04), 0 24px 48px -16px rgba(10,10,10,.16);
+
+  --radius:    10px;
+  --radius-lg: 14px;
+
+  --container: 1200px;
+  --gutter: 24px;
+
+  --t-fast: 140ms cubic-bezier(.2,.6,.2,1);
+}
+
+[data-theme="dark"]{
+  --ink:     #FAFAFA;
+  --ink-2:   #E5E7EB;
+  --muted:   #9CA3AF;
+  --bg:      #000000;
+  --subtle:  #0A0A0A;
+  --subtle-2:#111111;
+  --border:  #1A1A1A;
+  --border-2:#262626;
+  --warn:    #FBBF24;
+  --warn-bg: #2A1F08;
+  --green:   #10B981;
+  --shadow:    0 1px 2px rgba(0,0,0,.4), 0 8px 24px -8px rgba(0,0,0,.5);
+  --shadow-lg: 0 1px 2px rgba(0,0,0,.4), 0 24px 48px -16px rgba(0,0,0,.7);
+}
+
+.landing-body { background: var(--bg); color: var(--ink); scroll-behavior: smooth; }
+
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:13px; font-weight:500; color:var(--primary);
+  letter-spacing:0;
+}
+.eyebrow::before{
+  content:""; width:14px; height:1px; background:currentColor; display:inline-block;
+}
+
+.hero{padding:80px 0 96px; position:relative; overflow:hidden}
+.hero::before{
+  content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
+  background-image: radial-gradient(circle at 1px 1px, var(--border) 1px, transparent 1.4px);
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, #000 30%, transparent 75%);
+          mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, #000 30%, transparent 75%);
+  opacity:.7;
+}
+
+.mock-glow{
+  transform: translateZ(-80px);
+  position:absolute; inset:-20% -10%;
+  background:
+    radial-gradient(60% 50% at 65% 40%, color-mix(in oklab, var(--primary) 55%, transparent), transparent 70%),
+    radial-gradient(40% 40% at 30% 70%, color-mix(in oklab, var(--accent) 35%, transparent), transparent 70%);
+  filter: blur(40px); opacity:.55; z-index:0; pointer-events:none;
+}
+
+.review .av{
+  width:28px; height:28px; flex:none;
+  border-radius:7px;
+  background:linear-gradient(135deg, var(--primary), var(--accent));
+  display:inline-flex; align-items:center; justify-content:center;
+  color:#fff; font-size:11px; font-weight:600; letter-spacing:.02em;
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  background: var(--primary);
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
